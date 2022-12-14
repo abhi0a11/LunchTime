@@ -1,0 +1,1183 @@
+/* MEDIA QUERRY */
+@media (min-width: 993px) {
+    .mob {
+        display: none;
+    }
+
+    .fav-icn-lap:hover {
+        font-size: 1.5rem;
+        transition-duration: 0.3s;
+    }
+}
+
+@media (max-width: 992px) {
+    .lap {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1400px) {
+
+    .ss-hero {
+        max-width: 1075px;
+    }
+
+    .p-lg-5 {
+        padding: 1.3rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .pt-5 {
+        padding-top: 0rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 2.5rem !important;
+    }
+
+    .display-6 {
+        font-size: 2.3rem;
+    }
+}
+
+@media only screen and (min-width:1370px) and (max-width:1400px) {
+
+    .ss-hero {
+        max-width: 1050px;
+    }
+
+    .display-5 {
+        font-size: 2.4rem !important;
+    }
+
+    .lead {
+        font-size: 0.93rem !important;
+    }
+
+    .display-6 {
+        font-size: 2rem;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 1.3rem !important;
+    }
+
+    .pt-lg-5 {
+        padding-top: 1.5rem !important;
+    }
+
+    .pt-5 {
+        padding-top: 2rem !important;
+    }
+}
+
+@media only screen and (min-width:1306px) and (max-width:1370px) {
+
+    .ss-hero {
+        max-width: 1024px;
+    }
+    .p-md-5 {
+        padding: 3rem!important;
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+    .display-5 {
+        font-size: 1.75rem !important;
+    }
+
+    .lead {
+        font-size: 0.63rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.5rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+
+    .head-2 {
+        font-size: 3.4rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:1200px) and (max-width:1305px) {
+
+    .ss-hero {
+        max-width: 923px;
+    }
+    .p-md-5 {
+        padding: 3rem!important;
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+    .display-5 {
+        font-size: 1.75rem !important;
+    }
+
+    .lead {
+        font-size: 0.63rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.5rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+
+    .head-2 {
+        font-size: 3.4rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1199px) {
+    .ss-hero {
+        max-width: 860px;
+    }
+    .p-md-5 {
+        padding: 3rem!important;
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+    .display-5 {
+        font-size: 1.4rem !important;
+    }
+
+    .lead {
+        font-size: 0.78rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.125rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .p-about {
+        font-size: 0.7rem !important;
+    }
+
+    .head-2 {
+        font-size: 3.4rem;
+    }
+
+    .btn-about {
+        font-size: 0.7rem;
+
+        margin-top: 0.3rem;
+
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1023px) {
+
+    .ss-hero {
+        max-width: 761px;
+    }
+    .p-md-5 {
+        padding: 3rem!important;
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+    }
+    .display-5 {
+        font-size: 1.4rem !important;
+    }
+
+    .lead {
+        font-size: 0.78rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.125rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .p-about {
+        font-size: 0.7rem !important;
+    }
+
+    .head-2 {
+        font-size: 3.4rem;
+    }
+
+    .btn-about {
+        font-size: 0.7rem;
+
+        margin-top: 0.3rem;
+
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:992px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 0.25rem 0rem !important;
+    }
+
+    .nav-pills {
+        margin-bottom: 0rem !important;
+    }
+
+    .nav-link {
+        padding: 0.25rem;
+    }
+
+    .main-title {
+        font-size: 1.3rem !important;
+    }
+
+    .showcase-p {
+        font-size: 1.3rem;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .ss-hero {
+        max-width: 643px;
+    }
+
+    .display-5 {
+        margin-top: 1.5rem;
+        font-size: 1.3rem !important;
+    }
+
+    .lead {
+        font-size: 0.64rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.125rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .p-about {
+        font-size: 0.7rem !important;
+    }
+
+    .head-2 {
+        font-size: 2.8rem;
+    }
+
+    .btn-about {
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+    }
+
+    .col {
+        flex: 1 0 0%;
+    }
+
+    .row>* {
+        padding-left: 0;
+    }
+
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .row {
+        justify-content: flex-start !important;
+    }
+
+    .p-pay {
+        font-size: 0.9rem;
+    }
+
+    .px-4 {
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+    }
+
+    .me-sm-3 {
+        margin-right: 0.5rem !important;
+    }
+
+    .border-t {
+        padding-bottom: 0rem !important;
+    }
+
+}
+
+@media only screen and (min-width:567px) and (max-width:768px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 0.25rem 0rem !important;
+    }
+
+    .nav-link {
+        padding: 0.25rem;
+    }
+
+    .main-title {
+        font-size: 1.3rem !important;
+    }
+
+    .showcase-p {
+        font-size: 1.3rem;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .nav-pills {
+        margin-bottom: 0rem !important;
+    }
+
+    .ss-hero {
+        max-width: 600px;
+    }
+
+    .display-5 {
+        margin-top: 1.5rem;
+        font-size: 1.9rem !important;
+    }
+
+    .lead {
+        font-size: 0.89rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.125rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .head-2 {
+        font-size: 2.2rem;
+    }
+
+    .btn-about {
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+    }
+
+    .col {
+        flex: 1 0 0%;
+    }
+
+    .row>* {
+        padding-left: 0;
+    }
+
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .row {
+        justify-content: flex-start !important;
+    }
+
+    .p-pay {
+        font-size: 0.7rem;
+    }
+
+    .border-b {
+        font-size: 0.9rem !important;
+    }
+
+    .px-4 {
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+    }
+
+    .me-sm-3 {
+        margin-right: 0.5rem !important;
+    }
+
+    .border-t {
+        padding-bottom: 0rem !important;
+    }
+
+    .intro-text-mob {
+        margin-top: 1rem;
+    }
+
+    .p-bot {
+        padding-bottom: 0.5rem !important;
+        padding-top: 0rem !important;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width:425px) and (max-width:567px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 0.25rem 0rem !important;
+    }
+
+    .p-bot {
+        padding-bottom: 0.5rem !important;
+        padding-top: 0rem !important;
+        margin-top: 0rem !important;
+    }
+
+    .nav-link {
+        padding: 0.25rem;
+    }
+
+    .main-title {
+        font-size: 1.0rem !important;
+    }
+
+    .showcase-p {
+        font-size: 1rem;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .mb-2 {
+        margin-bottom: 0rem !important;
+    }
+
+    .ss-hero {
+        max-width: 415px;
+    }
+
+    .display-5 {
+        margin-top: 1.0rem;
+        font-size: 1.5rem !important;
+    }
+
+    .lead {
+        font-size: 0.9rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.125rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .p-about {
+        font-size: 0.7rem !important;
+    }
+
+    .head-2 {
+        font-size: 2rem;
+    }
+
+    .btn-about {
+        font-size: 0.67rem;
+        margin-top: 0.3rem;
+    }
+
+    .col {
+        flex: 1 0 0%;
+    }
+
+    .row>* {
+        padding-left: 0;
+    }
+
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    .row {
+        justify-content: flex-start !important;
+    }
+
+    .p-pay {
+        font-size: 0.7rem;
+    }
+
+    .border-b {
+        font-size: 0.69rem !important;
+        padding-bottom: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    .footer-b {
+        margin-bottom: 0rem !important;
+        margin-top: 0rem !important;
+    }
+
+    .px-4 {
+        padding-right: 0.25rem !important;
+        padding-left: 0.25rem !important;
+    }
+
+    .me-sm-3 {
+        margin-right: 0.5rem !important;
+    }
+
+    .border-t {
+        padding-bottom: 0rem !important;
+        /* padding-top: 0rem !important;    */
+    }
+
+    .typing-text {
+        letter-spacing: 0.25rem;
+    }
+
+    .d-grid {
+        display: block !important;
+    }
+
+    .intro-text-mob {
+        margin-top: 1rem;
+    }
+    .py-5{
+        padding-top: 1.5rem!important;
+    }
+    .div--1{
+        max-width: 50%;
+    }
+    .div--1>div>div{
+        padding: 2.5rem!important;
+    }
+}
+@media only screen and (min-width:375px) and (max-width:425px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 0.25rem 0rem !important;
+    }
+
+    .nav-link {
+        padding: 0.25rem;
+    }
+
+    .main-title {
+        font-size: 0.8rem !important;
+    }
+
+    .showcase-p {
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .mb-2 {
+        margin-bottom: 0rem !important;
+    }
+
+    .ss-hero {
+        max-width: 415px;
+    }
+
+    .display-5 {
+        margin-top: 1.5rem;
+        font-size: 1.6rem !important;
+    }
+
+    .lead {
+        font-size: 0.8rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .p-bot {
+        padding-bottom: 0.5rem !important;
+        padding-top: 0rem !important;
+        margin-top: 0rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.6rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .p-about {
+        font-size: 0.7rem !important;
+    }
+
+    .head-2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-about {
+        font-size: 0.67rem;
+        margin-top: 0.3rem;
+    }
+
+    .col {
+        flex: 1 0 0%;
+    }
+
+    .row>* {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+
+    /* 
+    .py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+    } */
+
+    .row {
+        justify-content: flex-start !important;
+    }
+
+    .p-pay {
+        font-size: 0.5rem;
+    }
+
+    .border-b {
+        font-size: 0.69rem !important;
+        padding-bottom: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    .footer-b {
+        margin-bottom: 0rem !important;
+        margin-top: 0rem !important;
+    }
+
+    /* .px-4 {
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+    } */
+
+    .me-sm-3 {
+        margin-right: 0.5rem !important;
+    }
+
+
+
+    .typing-text {
+        letter-spacing: 0.25rem;
+    }
+
+    .d-grid {
+        display: block !important;
+    }
+
+    .intro-text-mob {
+        margin-top: 1rem;
+    }
+
+    .card-t-h3 {
+        margin-bottom: 0rem !important;
+    }
+
+    .card-t-div {
+        padding: 4rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .my-4 {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 2rem !important;
+        /* padding-bottom: 3rem!important; */
+    }
+}
+
+/* @media only screen and (min-width:375px) and (max-width:425px) {
+.navbar-brand {
+        font-size: 1rem;
+    }
+    .navbar {
+        padding: 0.25rem 0rem !important;
+    }
+
+    .nav-link {
+        padding: 0.25rem;
+    }
+    .main-title{
+        font-size: 0.8rem !important;
+    }
+    .showcase-p{
+        font-size:0.8rem;
+        margin-bottom: 0.25rem !important;
+    }
+    .mb-2 {
+        margin-bottom: 0rem !important;
+    }
+
+    .ss-hero {
+        max-width: 203px;
+    }
+
+    .display-5 {
+        margin-top: 0.5rem;
+        font-size: 0.68rem !important;
+    }
+
+    .lead {
+        font-size: 0.35rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+    .p-bot {
+        padding-bottom: 0.5rem !important; padding-top: 0rem!important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.125rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .p-about {
+        font-size: 0.7rem !important;
+    }
+
+    .head-2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-about {
+        font-size: 0.67rem;
+        margin-top: 0.3rem;
+    }
+
+    .col {
+        flex: 1 0 0%;
+    }
+
+    .row>* {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .col-sm-8 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .py-5 {
+        padding-top: 1rem!important;
+        padding-bottom: 2rem!important;
+    }
+    .row {
+        justify-content: flex-start !important;
+    }
+
+    .p-pay {
+        font-size: 0.5rem;
+    }
+    .border-b{
+        font-size: 0.69rem !important;    padding-bottom: 0rem!important;margin-bottom: 0rem!important;
+    }
+    .footer-b{
+         margin-bottom: 0rem!important;
+         margin-top: 0rem!important;
+    }
+    .px-4 {
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+    }
+
+    .me-sm-3 {
+        margin-right: 0.5rem !important;
+    }
+
+    .border-t {
+        padding-bottom: 0rem !important;
+        /* padding-top: 0rem !important;    
+    }
+    .typing-text{
+        letter-spacing: 0.25rem;
+    }
+    .d-grid{
+        display: block !important;
+    }.intro-text-mob{
+        margin-top: 1rem;
+    }
+    .card-t-h3{
+        margin-bottom: 0rem !important;
+    }
+    .card-t-div{
+        padding: 2rem!important;
+        padding-bottom: 1rem!important;
+    }
+} */
+@media only screen and (min-width:320px) and (max-width:375px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar {
+        padding: 0.25rem 0rem !important;
+    }
+
+    .nav-link {
+        padding: 0.25rem;
+    }
+
+    .main-title {
+        font-size: 0.8rem !important;
+    }
+
+    .showcase-p {
+        font-size: 0.8rem;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .mb-2 {
+        margin-bottom: 0rem !important;
+    }
+
+    .display-5 {
+        margin-top: 0.5rem;
+        font-size: 1.1rem !important;
+    }
+
+    .lead {
+        font-size: 0.6rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .p-lg-5 {
+        padding: 0rem !important;
+    }
+
+    .p-bot {
+        padding-bottom: 0.5rem !important;
+        padding-top: 0rem !important;
+        margin-top: 0rem !important;
+    }
+
+    .pt-lg-3 {
+        padding-top: 0rem !important;
+    }
+
+    .display-6 {
+        font-size: 1.125rem;
+    }
+
+    .pt-5 {
+        padding-top: 1rem !important;
+    }
+
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .h1-about {
+
+        font-size: 1.35rem !important;
+
+    }
+
+    .p-about {
+        font-size: 0.63rem !important;
+    }
+
+    .head-2 {
+        font-size: 1.5rem;
+    }
+
+    .btn-about {
+        font-size: 0.67rem;
+        margin-top: 0.3rem;
+    }
+
+    .py-5 {
+        padding-top: 1rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .row {
+        justify-content: flex-start !important;
+    }
+
+    .p-pay {
+        font-size: 0.5rem;
+    }
+
+    .border-b {
+        font-size: 0.69rem !important;
+        padding-bottom: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+
+    .footer-b {
+        margin-bottom: 0.5rem !important;
+        margin-top: 0rem !important;
+    }
+
+    .px-4 {
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+    }
+
+    .me-sm-3 {
+        margin-right: 0.5rem !important;
+    }
+
+    .border-t {
+        padding-bottom: 0rem !important;
+        /* padding-top: 0rem !important;  */
+    }
+
+    .typing-text {
+        letter-spacing: 0.25rem;
+    }
+
+    .d-grid {
+        display: block !important;
+    }
+
+    .intro-text-mob {
+        margin-top: 1rem;
+    }
+
+    .card-t-h3 {
+        margin-bottom: 0rem !important;
+    }
+
+    .card-t-div {
+        padding: 2rem !important;
+        padding-bottom: 2.7rem !important;
+    }
+
+    .my-4 {
+        margin-top: 0rem !important;
+        margin-bottom: 0rem !important;
+    }
+}

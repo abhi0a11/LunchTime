@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LunchTime</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media_querry.css">
+  <link rel="stylesheet" href="transition.css">
+  <link href="list-groups.css" rel="stylesheet">
+  <!-- bootstrap icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- tailwind -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script>
+    var valid;
+    function fetchPrice() {
+      var qty_roti = document.Orderform.TandoriQty.value;
+      var qty_chole = document.Orderform.Chole_label_Qty.value;
+      var qty_mix = document.Orderform.Mix_label_Qty.value;
+      var qty_paneer = document.Orderform.Paneer_label_Qty.value;
+      var qty_imarti = document.Orderform.Imarti_label_Qty.value;
+      var qty_samosa = document.Orderform.Samosa_label_Qty.value;
+      var qty_coke = document.Orderform.Coke_label_Qty.value;
+      var qty_kulche = document.Orderform.kulche_label_Qty.value;
+      var qty_bature = document.Orderform.Bature_label_Qty.value;
+
+      if (isNaN(qty_roti) || isNaN(qty_chole) || isNaN(qty_mix) || isNaN(qty_paneer) || isNaN(qty_imarti) || isNaN(qty_samosa) || isNaN(qty_coke) || isNaN(qty_kulche) || isNaN(qty_bature)) {
+        alert("Item Quantity can only be a Numeric value!");
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+
+    function validateform() {
+      var name = document.Orderform.Name.value;
+      var phone = document.Orderform.phone.value;
+      var banking_name = document.Orderform.Banking_Name.value;
+      var refrence_no = document.Orderform.Reference_Number.value;
+
+      if (name == null || name == "") {
+        alert("Name can't be blank");
+        return false;
+      }
+      else if (!isNaN(name)) {
+        alert("Name can't be numberic!");
+        return false;
+      }
+      else if (banking_name == null || banking_name == "") {
+        alert("Banking name can't be blank");
+        return false;
+      }
+      else if (refrence_no == null || refrence_no == "") {
+        alert("refrence id can't be blank");
+        return false;
+      }
+      else if (!isNaN(banking_name)) {
+        alert("Banking name can't be numberic!");
+        return false;
+      }
+      else if (phone.length != 10 || isNaN(phone)) {
+        alert("Enter correct phone number!");
+        return false;
+      }
+      else return true;
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <!-- navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-expand-sm navbar-expand-md bg-dark fixed-top " id="main-nav">
+    <div class="container-fluid ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-white" href="#">LunchTime</a>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav nav justify-content-center mb-2 mb-lg-0 nav-pills">
+          <li class="nav-item footer-list"><a class="nav-link active  text-white" aria-current="page"
+              href="#showcase">Home</a> </li>
+          <li class="nav-item footer-list"><a class="nav-link active  text-white" aria-current="page"
+              href="#scrollspy-details">Features</a> </li>
+          <li class="nav-item footer-list lap"><a class="nav-link active  text-white" aria-current="page"
+              href="#custom-cards-lap">Menu</a> </li>
+          <li class="nav-item footer-list mob"><a class="nav-link active  text-white" aria-current="page"
+              href="#custom-cards-mob">Menu</a> </li>
+          <li class="nav-item footer-list"><a class="nav-link active  text-white" aria-current="page"
+              href="#scroll-about">About</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true" class="scrollspy-example bg-light navbar-collapse" tabindex="0">
+
+    <!-- Section with modal -->
+
+    <section class="showcase-area hidden " id="showcase">
+      <div class="showcase-container">
+        <h1 class="main-title hidden transition-up">Eat Right Food</h1>
+        <p class="showcase-p hidden transition-up text-center">Eat Healthy food, it is good for your health.</p>
+        <a data-bs-toggle="modal" href="#exampleModalToggle" role="button"
+          class="btn transition-up hidden btn-outline-success fw-bold rounded-5 btn-lg border-bold btn-about">Order</a>
+      </div>
+    </section>
+
+    <!-- ss hero -->
+    <div id="scrollspy-details">
+      <!-- laptop -->
+      <div class="container my-5 ss-hero hidden transition-right-lg lap">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-5 border shadow-lg hidden ">
+          <div class="col-lg-6 p-3 p-lg-5 pt-lg-3 mb-5 text-center">
+            <h1 class="display-5 fw-bold lh-1 mb-5 hidden">Pickup & delivery from restaurants near you</h1>
+            <p class="lead hidden transition">Explore restaurants that deliver near you, or try yummy takeout fare. With
+              a place for every
+              taste, it’s easy to find food you crave, and order online. Find great meals, fast with lots of local
+              menus. Enjoy eating the convenient way with places that deliver to your door.</p>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3 img-fluid" src="features-1.webp" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container my-5 ss-hero hidden show transition-left-lg lap">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-5 border shadow-lg hidden ">
+          <div class="col-lg-6 p-3 p-lg-5 pt-lg-3 mb-5 text-center">
+            <h1 class="display-5 fw-bold lh-1 mb-5 hidden">What is included in the box?</h1>
+            <p class="lead hidden transition">Your meal will be packed with a delicious sabji and four tandoori roti
+              with some chopped onions and chatni.</p>
+          </div>
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3 img-fluid" src="features-1.webp" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile -->
+      <div class="container my-5 ss-hero mob" data-aos="zoom-in-down">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-5 border shadow-lg hidden mob-css">
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3 img-fluid" src="features-1.webp" alt="">
+          </div>
+          <div class="col-lg-6 p-3 p-lg-5 pt-lg-3 mb-5 text-center">
+            <h1 class="display-5 fw-bold lh-1 mb-5 ">Pickup & delivery from restaurants near you</h1>
+            <p class="lead  transition-mob">Explore restaurants that deliver near you, or try yummy takeout fare. With
+              a place for every
+              taste, it’s easy to find food you crave, and order online. Find great meals, fast with lots of local
+              menus. Enjoy eating the convenient way with places that deliver to your door.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container my-5 ss-hero mob" data-aos="zoom-in-down">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-5 border shadow-lg hidden mob-css">
+          <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+            <img class="rounded-lg-3 img-fluid" src="features-1.webp" alt="">
+          </div>
+          <div class="col-lg-6 p-3 p-lg-5 pt-lg-3 mb-5 text-center">
+            <h1 class="display-5 fw-bold lh-1 mb-5 ">What is included in the box?</h1>
+            <p class="lead  transition-mob">Your meal will be packed with a delicious sabji and four tandoori roti
+              with some chopped onions and chatni.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extra card -->
+    <!-- laptop -->
+    <div class=" px-4 py-5 ss-hero container lap" id="custom-cards-lap">
+      <h2 class="pb-2 border-bottom ">Menu</h2>
+
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 ">
+
+        <div class="col hidden transition-right-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('samosa-recipe.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Imarti</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col  hidden transition-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('chole-kulche.jpeg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Chole kulche</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden transition-left-down ">
+          <div class="card card-cover h-100 box-6 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('photo.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Chole bature</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden transition-right-down">
+          <div class="card box-1 card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('imarti.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Shahi Paneer </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col hidden transition-down">
+          <div class="card card-cover h-100 box-2 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('s_drink.jpg');background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Coke</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col hidden transition-left-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('samosa-recipe.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Samosa</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col hidden transition-right-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('samosa-recipe.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Imarti</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col  hidden transition-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('chole-kulche.jpeg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Chole kulche</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col hidden transition-left-down ">
+          <div class="card card-cover h-100 box-6 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('photo.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Chole bature</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile version -->
+    <div class="container px-4 py-5 ss-hero mob" id="custom-cards-mob">
+      <h2 class="pb-2 border-bottom ">Menu</h2>
+
+      <div class=" row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5 ">
+        <!-- row 1 -->
+        <div class="col " data-aos="zoom-in-down">
+          <div class="card box-1 card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('imarti.jpg'); background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Tandoori Roti</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col " data-aos="zoom-in-down">
+          <div class="card box-1 card-cover h-100 overflow- text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('imarti.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Shahi Paneer </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  " data-aos="zoom-in-down">
+          <div class="card box-1 card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('imarti.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Shahi Paneer </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col " data-aos="zoom-in-down">
+          <div class="card box-1 card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('imarti.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Shahi Paneer </h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col " data-aos="zoom-in-down">
+          <div class="card card-cover h-100 box-2 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('s_drink.jpg');background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Coke</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col " data-aos="zoom-in-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('samosa-recipe.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Samosa</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- row 3 -->
+        <div class="col " data-aos="zoom-in-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('samosa-recipe.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Imarti</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col  " data-aos="zoom-in-down">
+          <div class="card card-cover h-100 box-5 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('chole-kulche.jpeg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Chole kulche</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col div--1 " data-aos="zoom-in-down">
+          <div class="card card-cover h-100 box-6 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+            style="background-image: url('photo.jpg');    background-size: cover;">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1 card-t-div">
+              <h3 class="pt-5 mt-1 mb-4 display-6 lh-1 fw-bold card-t-h3">Chole bature</h3>
+              <ul class="d-flex list-unstyled mt-auto">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- intro -->
+    <div class="row row-cols-8 row-cols-md-8 g-4 bg-dark text-bg-dark hidden" id="scroll-about">
+      <div class="p-5 p-md-5 mb-4 rounded hidden p-bot">
+        <!-- laptop version -->
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 hidden lap ">
+          <div class="col-lg-6 hidden transition ">
+            <h1 class="display-5 fw-bold lh-1 mb-3 h1-about">I'm <span class="auto-inp" style="color: #ffc107;"></span>
+            </h1>
+            <p class="lead text-muted p-about" data-aos="flip-up">CSIOT 2nd year
+              NSUT
+              East Campus.<br>You can reach me for more details!<br> We are starting a service of delivering meal to the
+              students in the
+              break time i.e 1pm.</p>
+            <p class="lead text-muted p-about" data-aos="flip-up"> You can contact us any time on <a href="#"> <i
+                  class="bi bi-whatsapp fav-icn-lap" style="color:#198754;padding:5px;"></i></a> ,<a class="lap"
+                href="https://www.instagram.com/invites/contact/?i=18dcy8kr6ziic&utm_content=4z5wnkq" target="_blank"><i
+                  class="bi bi-instagram fav-icn-lap" style="color:#CE7777;padding:5px;"></i></a>.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+          <div class="col-10 col-sm-8 col-lg-2 transition-right-down hidden">
+            <img src="abhi.jpg"
+              class="d-block mx-lg-auto img-fluid hidden tansition-right img-about shadow-lg imag-shad" alt="Abhishek"
+              width="200" height="100" loading="lazy" style="border-radius:15% ;">
+          </div>
+        </div>
+        <!-- mobile version -->
+        <div class="row flex-lg-row-reverse  g-5 hidden mob p-bot">
+          <div class="col-10 col-sm-8 col-lg-2 transition-right hidden">
+            <img src="abhi.jpg"
+              class="d-block mx-lg-auto img-fluid hidden tansition-right img-about shadow-lg imag-shad" alt="Abhishek"
+              width="200" height="100" loading="lazy" style="border-radius:15% ;">
+          </div>
+          <div class="col-lg-6 hidden transition intro-text-mob p-bot">
+            <h1 class="display-5 fw-bold lh-1 mb-3 h1-about">I'm <span class="auto-inp-mob"
+                style="color: #ffc107;"></span></h1>
+            <p class="lead text-muted  p-about" data-aos="flip-up">CSIOT 2nd year
+              NSUT
+              East Campus.<br>You can reach me for more details!<br> We are starting a service of delivering meal to the
+              students in the
+              break time i.e 1pm.</p>
+            <p class="lead text-muted p-about" data-aos="flip-up"> You can contact us any time on <a href="#"><i
+                  class="bi bi-whatsapp " style="color:#198754;padding:5px;"></i></a> ,<a
+                href="https://www.instagram.com/invites/contact/?i=18dcy8kr6ziic&utm_content=4z5wnkq" target="_blank"><i
+                  class="bi bi-instagram fav-icn-lap" style="color:#CE7777;padding:5px;"></i></a>.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+        </div>
+
+        <div class="row flex-lg-row-reverse  g-5 hidden p-bot">
+          <div class="col-10 col-sm-8 col-lg-2">
+            <img src="abhi.jpg" class="d-block mx-lg-auto img-fluid transition-left-up hidden imag-shad imag-about"
+              alt="Neeraj" width="200" height="100" loading="lazy" style="border-radius:15% ;">
+          </div>
+          <div class="col-lg-6 hidden transition intro-text-mob ">
+            <h1 class="display-5 fw-bold lh-1 mb-3 h1-about">I'm <span class="auto-inp-2"
+                style="color: #ffc107;"></span></h1>
+            <p class="lead text-muted p-about" data-aos="flip-up">CSIOT 2nd year
+              NSUT
+              East Campus.<br>You can reach me for more details!<br> We are starting a service of delivering meal to the
+              students in the
+              break time i.e 1pm.</p>
+            <p class="lead text-muted p-about" data-aos="flip-up"> You can contact us any time on <a href="#"><i
+                  class="bi bi-whatsapp fav-icn-lap" style="color:#198754;padding:5px;"></i></a> ,<a href="#"
+                target="_blank"><i class="bi bi-instagram fav-icn-lap" style="color:#CE7777;padding:5px;"></i></a>.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- dark mode hero  -->
+      <div class="bg-dark text-secondary px-4 py-5 text-center border-t hidden " data-aos="zoom-in-down">
+        <div class="py-5">
+          <h2 class="head-2 hidden  fw-bold lh-1 mb-5 ">Place your Order Now!
+          </h2>
+          <div class="col-lg-6 mx-auto hidden">
+            <p class=" mb-4 hidden p-pay">You can pay via UPI , Wallet or directly from your Bank Accounts!</p>
+            <div class=" gap-2 d-sm-flex justify-content-sm-center " style="margin-bottom: 2rem;">
+              <a data-bs-toggle="modal" href="#exampleModalToggle" role="button"
+                class="btn btn-outline-success btn-lg fw-bold px-4 me-sm-3 btn-about " data-aos="zoom-in-down">Place
+                Order </a>
+              <a class="btn btn-outline-light btn-lg  px-4 me-sm-3 fw-bold btn-about  " data-bs-toggle="modal"
+                href="#feedbackModal" role="button" data-aos="zoom-in-down">Feedback</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- feedback modal -->
+
+    <div class="modal fade" id="feedbackModal" aria-labelledby="feedbackModal" tabindex="-1" style="display: none"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="feedbackModal">
+              Enter your Feedback.
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="feedback-modal">
+
+              <div class="form-floating mb-3">
+                <input type="Name" class="form-control rounded-3" id="modalfeedback" placeholder="Name" name="feedback"
+                  required>
+                <label for="modalfeedback">Feedback</label>
+              </div>
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-success" type="submit">Submit</button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Order form modal -->
+    <div class="modal fade" id="exampleModalToggle" aria-labelledby="exampleModalToggleLabel" tabindex="-1"
+      style="display: none" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 " id="exampleModalToggleLabel">
+              Place your Order
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- form begin -->
+
+            <form class="" action="#" method="post" name="Orderform" onsubmit="return validateform()">
+              <div class="modal-body">
+                <b>Note:- Order placed after 12pm will automatically stand <span
+                    style="color:red">CANCELLED!</span>.</b>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="Name" class="form-control rounded-3" id="floatingInput" placeholder="Name" name="Name"
+                  required>
+                <label for="floatingInput">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control rounded-3" id="floatingPassword" placeholder="Password"
+                  rows="3" name="phone" required>
+                <label for="floatingPassword">Phone Number</label>
+              </div>
+
+              <div class="modal-body">
+                <b>Menu:</b>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" onclick="myFunction()"
+                    name="Tandoori">
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Tandori Roti
+                  </label>
+                  <div class="">
+                    <input type="text" name="TandoriQty" class="form-control rounded-3" id="floatingQuantity"
+                      placeholder="rs: 5/roti" value="" style="display: none;">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                    onclick="myFunction_8()" name="Chole">
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Chole ki Sabji (<i class="bi bi-currency-rupee"></i>20/serve)
+                  </label>
+                  <div class="">
+                    <input type="text" class="form-control rounded-3" id="floatingQuantityChole" name="Chole_label_Qty"
+                      placeholder="Enter Quantity" value="" style="display: none">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChole" name="Mix_Veg"
+                    onclick="myFunction_1()">
+                  <label class="form-check-label" for="flexCheckChole">
+                    Mix Veg (<i class="bi bi-currency-rupee"></i>20/serve)
+                  </label>
+                  <div class="">
+                    <input type="text" class="form-control rounded-3" id="floatingQuantityVeg" name="Mix_label_Qty"
+                      placeholder="Enter Custom Quantity" value="" style="display: none">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckPaneer" name="Paneer"
+                    onclick="myFunction_2()">
+                  <label class="form-check-label" for="flexCheckPaneer">
+                    paneer (<i class="bi bi-currency-rupee"></i>40/serve)
+                  </label>
+
+                  <div class="">
+                    <input type="text" class="form-control rounded-3" id="floatingQuantityPaneer"
+                      name="Paneer_label_Qty" placeholder="Enter Custom Quantity" style="display: none" value="">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <b>Extras:</b>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" name="Imarti" id="flexCheckImarti"
+                    onclick="myFunction_3()">
+                  <label class="form-check-label" for="flexCheckImarti">
+                    Imarti (<i class="bi bi-currency-rupee"></i>15/ piece)
+                  </label>
+                  <div class=" ">
+                    <input type="text" class="form-control rounded-3" name="Imarti_label_Qty" id="ImartiInp"
+                      placeholder="Enter Custom Quantity" style="display: none" value="">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" name="Samosa" id="flexCheckSamosa"
+                    onclick="myFunction_4()">
+                  <label class="form-check-label" for="flexCheckSamosa">
+                    Samosa (<i class="bi bi-currency-rupee"></i>15/ piece)
+                  </label>
+                  <div class="">
+                    <input type="text" class="form-control rounded-3" name="Samosa_label_Qty" id="SamosaInp"
+                      placeholder="Enter Custom Quantity" style="display: none" value="">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckCoke" name="Coke"
+                    onclick="myFunction_5()">
+                  <label class="form-check-label" for="flexCheckCoke">
+                    Coke (750 ml @<i class="bi bi-currency-rupee"></i>50 rs)
+                  </label>
+                  <div class="">
+                    <input type="text" class="form-control rounded-3" name="Coke_label_Qty" id="CokeInp"
+                      placeholder="Enter Custom Quantity" style="display: none" value="">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckKulche" name="Kulche"
+                    onclick="myFunction_6()">
+                  <label class="form-check-label" for="flexCheckKulche">
+                    Chole Kulche (<i class="bi bi-currency-rupee"></i>40 plate)
+                  </label>
+                  <div class=" ">
+                    <input type="text" class="form-control rounded-3" name="kulche_label_Qty" id="KulcheInp"
+                      placeholder="Enter Custom Quantity" style="display: none" value="">
+                  </div>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckBature" name="Bature"
+                    onclick="myFunction_7()">
+                  <label class="form-check-label" for="flexCheckBature">
+                    Chole Bhature (<i class="bi bi-currency-rupee"></i>40 plate)
+                  </label>
+                  <div class="">
+                    <input type="text" class="form-control rounded-3" id="BatureInp" name="Bature_label_Qty"
+                      style="display: none" value="">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="bill_item border rounded-3 p-1 all" id="all_div">
+                <ul class="item_order all" id="all_ul">
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div1">
+                    <li id="item1" class="all"></li>
+                    <span id="Checkout1" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div2">
+                    <li id="item2" class="all"></li>
+                    <span id="Checkout2" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div3">
+                    <li id="item3" class="all"></li>
+                    <span id="Checkout3" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div4">
+                    <li id="item4" class="all"></li>
+                    <span id="Checkout4" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div5">
+                    <li id="item5" class="all"></li>
+                    <span id="Checkout5" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div6">
+                    <li id="item6" class="all"></li>
+                    <span id="Checkout6" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div7">
+                    <li id="item7" class="all"></li>
+                    <span id="Checkout7" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div8">
+                    <li id="item8" class="all"></li>
+                    <span id="Checkout8" class="m-2 all"></span>
+                  </div>
+                  <div class="d-flex justify-content-between all rounded-3 " id="item_div9">
+                    <li id="item9" class="all"></li>
+                    <span id="Checkout9" class="m-2 all"></span>
+                  </div>
+
+                </ul>
+              </div>
+              <div class="d-flex align-items-center border rounded-3 p-1">
+                <button class="btn rounded-3 btn-success px-4 me-sm-3 fw-bold " onclick="calculatePrice(), fetchPrice()"
+                  type="button">Fetch Bill Amount</button>
+                <b> <span id="Checkout" class="m-2"></span></b>
+                <div class="form-check">
+                  <input class="form-check-input " type="text" value="" id="Checkout" name="Total" style="opacity: 0;"
+                    onclick="myFunction_7()">
+                </div>
+              </div>
+
+              <div class="modal-body border border-3 border-success rounded-3 mt-1">
+                <b> Make your payment,Here are my UPI details:</b><br>
+                Name - Abhishek Kumawat<br>
+                UPI Handle - ak9828855466@paytm<br>
+                Pay me on Paytm - <a href="https://p.paytm.me/xCTH/dq1euivr" target="_blank">Click to Pay</a><br><br>
+                <img src="paytm.jpg" class="img-fluid" alt="">
+              </div>
+              <!-- <div class="modal-body">
+                Attach payment proof:
+              </div> -->
+              <!-- <div class="input-group mb-3"> -->
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-3 mt-3 border border-success border-2"
+                  id="inputGroupFile03" placeholder="Payment Reference number" name="Banking_Name" required>
+                <label for="inputGroupFile03">Banking name </label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-3 mt-3 border border-success border-2"
+                  id="inputGroupFile02" placeholder="Payment Reference Id(Find in Payment details)"
+                  name="Reference_Number" required>
+                <label for="inputGroupFile02" style="font-size: 13px;">Payment Reference Id(Find in Payment
+                  details)</label>
+              </div>
+
+              <button class="w-100 mb-2 btn btn-lg rounded-3 btn-success " type="submit" id="Submit_button"
+                onclick="calculatePrice(), orderPlaced()">Place Order</button>
+              <small class="text-muted">By placing order, you agree to the terms of use. You can't change your order
+                once placed.</small>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- footer -->
+    <div class="row row-cols-8 row-cols-md-8 g-4 bg-dark text-bg-dark">
+
+      <footer class="py-3 my-2 footer-b">
+        <ul class="nav justify-content-center border-b pb-3 mb-3 ">
+          <li class="nav-item footer-list"><a href="#carouselExampleDark"
+              class="nav-link px-2 text-muted footer-list">Home</a></li>
+          <li class="nav-item footer-list"><a href="#scrollspy-details"
+              class="nav-link px-2 text-muted footer-list">Features</a></li>
+          <li class="nav-item footer-list lap"><a href="#custom-cards-lap"
+              class="nav-link px-2 text-muted footer-list">Menu</a></li>
+          <li class="nav-item footer-list mob"><a href="#custom-cards-mob"
+              class="nav-link px-2 text-muted footer-list">Menu</a></li>
+          <li class="nav-item footer-list"><a href="#scroll-about"
+              class="nav-link px-2 text-muted footer-list">About</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted p-about">© 2022 Company, Inc</p>
+      </footer>
+    </div>
+
+  </div>
+
+  <!-- js links -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+  <!--  -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!--  -->
+</body>
+<script>
+  var typed = new Typed('.auto-inp', {
+    strings: ["<span style='letter-spacing:0.5rem'>Abhishek Kumawat</span>", "<span style='color:#198754;letter-spacing:0.5rem'>UI/UX Designer</span>", " <span style='color:#CE7777;letter-spacing:0.5rem'>Web Developer</span>", " <span style='color:#A58DE3;letter-spacing:0.5rem'>Student.</span>"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+  });
+</script>
+<script>
+  var typed_3 = new Typed('.auto-inp-mob', {
+    strings: ["<span class='typing-text'>Abhishek Kumawat</span>", "<span style='color:#198754;' class='typing-text'>UI/UX Designer</span>", " <span style='color:#CE7777;' class='typing-text'>Web Developer</span>", " <span style='color:#A58DE3;' class='typing-text'>Student.</span>"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+  });
+</script>
+
+<script>
+  var typed_2 = new Typed('.auto-inp-2', {
+    strings: ["<span class='typing-text'>Neeraj Chaudhary</span>", "<span style='color:#198754;' class='typing-text'>UI/UX Designer</span>", " <span style='color:#CE7777;' class='typing-text'>Web Developer</span>", " <span style='color:#A58DE3;' class='typing-text'>Student.</span>"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+  });
+
+  // aos
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxoXY6VcsFKZfwH3lAmxN8980KN0v-eqcegxt4otusYeYtHfyVatpG3miu9DOHellFsGA/exec'
+  const form = document.forms['Orderform']
+  const feedback = document.getElementById('Submit_button');
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        feedback.innerHTML = "Hurrray! Order Placed " + "<i class='bi bi-check-circle'></i>";
+        document.getElementById("Submit_button").style.background = '#198754';
+        document.getElementById("Submit_button").style.border = '2px solid #198754';
+        document.getElementById("Submit_button").style.color = 'white';
+        //form.reset()
+      })
+      .catch(error => {
+        //feedback.innerHTML ="Place Order";
+        document.getElementById("Submit_button").style.background = '#198754';
+        document.getElementById("Submit_button").style.border = '2px solid #198754';
+        document.getElementById("Submit_button").style.color = 'white';
+
+      })
+
+  })
+
+</script>
+
+</html>
